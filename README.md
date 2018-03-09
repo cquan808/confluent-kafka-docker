@@ -1,18 +1,37 @@
 # Windows 10 Local Confluent Kafka Docker Guide
 
+## Kafka Setup
+
+auto create topics enable: true
+
+delete topic enable: true
+
+log retention: 15 minutes
+
+log retention check interval: 15 minutes
+
+replication factor: 3
+
+number of partitions: 3
+
+*Zookeeper* localhost:22181,localhost:32181,localhost:42181
+
+*Zookeeper* zookeeper-1,zookeeper-2,zookeeper-3
+
+*Kafka* localhost:30000,localhost:30001,localhost:30002
+
+*Kafka* kafka-1,kafka-2,kafka-3
+
+
 ## Prerequisites:
--Assumes you have the basic knowledge of docker and kafka
--Docker-compose installed
+Assumes you have the basic knowledge of docker and kafka
+
+Docker-compose installed
 
 ## Running docker containers
 Move to current directory
 
 `docker-compose up -d`
-
-*Zookeeper* localhost:22181,localhost:32181,localhost:42181
-*Zookeeper* zookeeper-1,zookeeper-2,zookeeper-3
-*Kafka* localhost:30000,localhost:30001,localhost:30002
-*Kafka* kafka-1,kafka-2,kafka-3
 
 # Test produce/consume examples:
 
@@ -26,3 +45,7 @@ Produce your own message in topic `dope`:
 
 Consume messages from topic `dope`
 `docker-compose exec kafka-1 kafka-console-consumer --bootstrap-server localhost:30000,localhost:30001,localhost:30002 --topic foo --new-consumer --from-beginning --max-messages 20`
+
+## Stop Services:
+
+`docker-compose down`
