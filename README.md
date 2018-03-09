@@ -1,6 +1,6 @@
 # Windows 10 Local Confluent Kafka Docker Guide
 
-## Kafka Setup
+## Kafka Setup 3 Zookeepers containers & 3 Kafka containers
 
 auto create topics enable: true
 
