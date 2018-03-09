@@ -1,4 +1,4 @@
-# Windows 10 Local Confluent Kafka Docker Guide
+# Windows 10 Localhost Confluent Kafka Docker Guide
 
 ## Kafka Setup 3 Zookeepers containers & 3 Kafka containers
 
