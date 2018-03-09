@@ -33,7 +33,7 @@ Move to current directory
 
 `docker-compose up -d`
 
-# Test produce/consume examples:
+# Test: Proudce Messages, Consume Messages, List Topics, Delete Topic
 
 Produce 17 messages in topic `epic`:
 `docker-compose exec kafka-1 bash -c "seq 17 | kafka-console-producer --request-required-acks 1 --broker-list localhost:30000,localhost:30001,localhost:30002 --topic epic && echo 'Produced 17 messages.'"`
