@@ -16,11 +16,11 @@ number of partitions: 3
 
 **Zookeeper:** localhost:22181,localhost:32181,localhost:42181
 
-**Zookeeper:** zookeeper-1,zookeeper-2,zookeeper-3
+**Zookeeper:** zookeeper-1,zookeeper-2,zookeeper-3 `only for docker-compose exec`
 
 **Kafka:** localhost:30000,localhost:30001,localhost:30002
 
-**Kafka:** kafka-1,kafka-2,kafka-3
+**Kafka:** kafka-1,kafka-2,kafka-3 `only for docker-compose exec`
 
 
 ## Prerequisites:
